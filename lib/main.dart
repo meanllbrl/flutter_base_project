@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mean_base_project/extensions/context_extension.dart';
-import 'package:mean_base_project/providers/state_provider.dart';
-import 'package:mean_base_project/providers/theme_provider.dart';
-import 'package:mean_base_project/views/weather_view.dart';
+import 'extensions/context_extension.dart';
 import 'package:provider/provider.dart';
+import 'providers/state_provider.dart';
+import 'providers/theme_provider.dart';
+import 'views/weather_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

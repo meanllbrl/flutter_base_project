@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mean_base_project/global_enums.dart';
-import 'package:mean_base_project/preferences/colorization.dart';
-import 'package:mean_base_project/preferences/typography.dart';
 import 'package:theme_provider/theme_provider.dart';
+import '../global_enums.dart';
+import '../preferences/colorization.dart';
+import '../preferences/typography.dart';
 
 class CustomThemeProvider extends StatelessWidget {
   final Widget child;

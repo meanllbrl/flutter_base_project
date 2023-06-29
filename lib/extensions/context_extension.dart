@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mean_base_project/providers/state_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_provider/theme_provider.dart';
 import '../helpers.dart';
+import '../providers/state_provider.dart';
 
 extension MeanShortCuts on BuildContext {
   BuildContext get context => this;

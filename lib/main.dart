@@ -7,8 +7,10 @@ import 'providers/state_provider.dart';
 import 'providers/theme_provider.dart';
 import 'views/weather_view.dart';
 
-void main() {
+
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+    await EasyLocalization.ensureInitialized();
   //Todo initialize classes and plugins
   runApp(MultiProvider(
       providers: [

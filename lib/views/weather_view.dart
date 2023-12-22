@@ -14,18 +14,6 @@ class _WeatherViewState extends State<WeatherView> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: controller.getWeather(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator();
-        } else {
-          final weather = snapshot.data;
-          return Text(
-            'City: ${weather!.city}\nTemperature: ${weather.temperature}\nDescription: ${weather.description}',
-          );
-        }
-      },
-    );
+    return Scaffold();
   }
 }

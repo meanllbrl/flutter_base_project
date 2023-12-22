@@ -14,6 +14,9 @@ extension MeanShortCuts on BuildContext {
   static const double horizontalPaddingPixel = 28;
   static const double _verticalPaddingPixel = 30;
   static const double _horizotnalPaddingRatio = 0.05;
+  static const double _borderRadius = 12;
+
+  BorderRadius get borderRadius => BorderRadius.circular(_borderRadius);
 
   //?returns height of the screen
   double get height => size.height;
@@ -30,6 +33,8 @@ extension MeanShortCuts on BuildContext {
         vertical: onlyHorizontal ? 0 : _verticalPaddingPixel);
   }
 
+  ColorScheme get colorScheme => theme.colorScheme;
+
   //?return main color with selected theme options
   ThemeData get theme {
     return ThemeProvider.themeOf(context).data;
@@ -44,7 +49,28 @@ extension MeanShortCuts on BuildContext {
         Duration.zero, () => FocusScope.of(context).requestFocus(node));
   }
 
-  // String translate(String key) {
-  //   return tryKey(context, key);
-  // }
+  void closeKeyboard() {
+    Future.delayed(Duration.zero, () => FocusScope.of(context).unfocus());
+  }
+
+  Widget get interval => const SizedBox(
+        height: 10,
+      );
+
+  Widget get divider => const Divider(
+        indent: 50,
+        endIndent: 50,
+        thickness: 2,
+        color: Colors.black26,
+      );
+
+  Widget get fullDivider => const Divider(
+        thickness: 2,
+        color: Colors.black26,
+      );
+  BoxDecoration primaryCardDecoration([Color? color]) {
+    return BoxDecoration(
+        color: color ?? colorScheme.primary,
+        borderRadius: BorderRadius.circular(_borderRadius));
+  }
 }
